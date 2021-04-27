@@ -1,0 +1,20 @@
+.div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+
+.back-button {
+    position: fixed;
+    left: 0.2%;
+    top: 0.2%;
+}
+
+.btn-success {
+    width: 80%;
+    margin: 5%;
+}

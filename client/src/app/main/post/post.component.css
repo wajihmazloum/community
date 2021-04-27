@@ -1,0 +1,27 @@
+img {
+    width: 200px;
+    height: 190px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+.fa-comments {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+}
+
+.title {
+    margin-top: 4%
+}
+
+.main-post {
+    border: 3px;
+    text-align: center;
+    margin: 100px;
+}

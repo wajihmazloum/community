@@ -1,0 +1,30 @@
+<h2>Main Page</h2>
+
+<!-- <div style="overflow: scroll;height: 50%;"> -->
+<div *ngFor="let post of posts" class="margin">
+    <app-question [name]="post.name" [content]="post.content" [profileImage]="post.profileImage" [id]="post._id" [owner]="post.ownerUid" (newData)="getNewData($event)" [origin]="'post'"></app-question>
+</div>
+<!-- </div> -->
+
+
+<i id="user" data-bs-toggle="modal" data-bs-target="#newPostModel" class="fas fa-plus-circle fa-2x"></i>
+<i id="nouser" (click)="nouser()" class="fas fa-plus-circle fa-2x"></i>
+
+<div class="modal fade" id="newPostModel" tabindex="-1" aria-labelledby="newPostModelLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newPostModelLabel">New post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input [(ngModel)]="username" class="form-control mb-3 form-control-sm" type="text" placeholder="your name" value="{{username}}" aria-label=".form-control-sm example" disabled>
+                <textarea [(ngModel)]="content" class="form-control" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button (click)="post()" type="button" class="btn btn-primary" data-bs-dismiss="modal">Post</button>
+            </div>
+        </div>
+    </div>
+</div>

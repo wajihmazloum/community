@@ -1,0 +1,56 @@
+<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-register-tab" data-bs-toggle="pill" data-bs-target="#pills-register" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Register</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-login-tab" data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Log in</button>
+    </li>
+
+</ul>
+
+
+<section class="container">
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-register" role="tabpanel" aria-labelledby="pills-register-tab">
+            <img id="profileImage" src="{{profileImage}}" alt="">
+            <h1 class="mb-3">Register</h1>
+            <div class="form-floating mb-3">
+                <input [(ngModel)]="email" type="email" class="form-control" id="registerEmail" placeholder="name@example.com">
+                <label for="registerEmail">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input [(ngModel)]="password" type="password" class="form-control" id="registerPassword" placeholder="Password">
+                <label for="registerPassword">Password</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input [(ngModel)]="username" type="text" class="form-control" id="username" placeholder="name@example.com">
+                <label for="username">username</label>
+            </div>
+            <div class="mb-3">
+                <label for="formFile">profile image</label>
+                <input (change)="handleInputChange($event)" class="form-control" type="file" id="formFile">
+            </div>
+            <button (click)="register()" class="btn btn-warning">Register</button>
+        </div>
+
+        <div class="tab-pane fade" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+            <h1 class="mb-3">Log in</h1>
+            <div class="form-floating mb-3">
+                <input [(ngModel)]="email" type="email" class="form-control" id="loginEmail" placeholder="name@example.com">
+                <label for="loginEmail">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input [(ngModel)]="password" type="password" class="form-control" id="loginPassword" placeholder="Password">
+                <label for="loginPassword">Password</label>
+            </div>
+            <button (click)="login()" class="btn btn-warning">Log in</button>
+        </div>
+
+
+
+
+
+
+
+    </div>
+</section>

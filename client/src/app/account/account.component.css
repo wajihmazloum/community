@@ -1,0 +1,20 @@
+img {
+    width: 90px;
+    height: 90px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+.btn-primary {
+    width: 80%;
+    margin: 5%;
+}
+
+.nav-pills {
+    margin: 13% 3%;
+}

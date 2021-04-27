@@ -1,0 +1,17 @@
+<a id="back" class="btn back-button" *ngIf="visibility" (click)="backClicked()"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
+
+<router-outlet></router-outlet>
+
+<i class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" class="fas fa-bars fa-2x" style="right: 1%;top: 1%;position: fixed;"></i>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h2 class="offcanvas-title" id="offcanvasExampleLabel">Quick Access Menu</h2>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <a class="btn btn-success" data-bs-dismiss="offcanvas" aria-label="Close" id="main" routerLink="/">main</a>
+        <a class="btn btn-success" data-bs-dismiss="offcanvas" aria-label="Close" id="profile" routerLink="/account/profile">profile</a><br>
+        <a class="btn btn-success" data-bs-dismiss="offcanvas" aria-label="Close" id="logs" routerLink="/account/logs">Sign in or register</a><br>
+    </div>
+</div>

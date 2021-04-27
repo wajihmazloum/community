@@ -1,0 +1,25 @@
+.container {
+    background-color: rgb(255, 255, 255);
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa-trash {
+    position: absolute;
+    width: 30px;
+    right: 6%;
+}

@@ -1,0 +1,35 @@
+<h2 class="title">Comments</h2>
+
+<div calss="main-post" style="text-align: center;">
+    <img src="{{fatherPostImage}}" alt="">
+    <h4>{{fatherPostName}}</h4>
+    <p>{{fatherPostContent}}</p>
+</div>
+
+
+
+
+
+<i data-bs-toggle="modal" data-bs-target="#exampleModal" class="fas fa-comments fa-2x"></i>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Comment</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input [(ngModel)]="currentUserName" class="form-control mb-3 form-control-sm" type="text" placeholder="your name" value="{{currentUserName}}" aria-label=".form-control-sm example" disabled>
+                <textarea [(ngModel)]="newCommentContent" class="form-control" name="" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button data-bs-dismiss="modal" (click)="addComment()" type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngFor="let c of comments">
+    <app-question [name]="c.ownerName" [content]="c.content" [profileImage]="c.ownerImage" [id]="c._id" [owner]="c.ownerUid" (newComments)="getNewComments($event)" [origin]="'comment'"></app-question>
+    <br>
+</div>

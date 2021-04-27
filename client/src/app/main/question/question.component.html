@@ -1,0 +1,15 @@
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-3">
+            <img src="{{profileImage}}" alt="">
+        </div>
+        <div class="col-9">
+            <h2>{{name}}</h2>
+            <br>
+            <p>{{content|slice:0:150}} <a *ngIf="visibility" routerLink="post/{{id}}"> ...see more</a></p>
+        </div>
+        <i (click)="delete($event)" id="{{id}}" class="container fas fa-trash"></i>
+    </div>
+    <br>
+</div>
